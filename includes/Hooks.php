@@ -14,7 +14,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
         $out->addModules( [ 'ext.darkMode.scripts' ] );
     }
 
-    public function onGetPreferences( User $user, array &$preferences ): void {
+    public function onGetPreferences( $user, &$preferences ): void {
         $preferences['darkmode-enabled'] = [
             'type' => 'toggle',
             'label-message' => 'darkmode-pref-label',
