@@ -9,7 +9,7 @@ use Skin;
 use User;
 
 class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
-    public function onBeforePageDisplay( OutputPage $out, Skin $skin ): void {
+    public function onBeforePageDisplay( $out, $skin ): void {
         $out->addModuleStyles( [ 'ext.darkMode.styles' ] );
         $out->addModules( [ 'ext.darkMode.scripts' ] );
     }
