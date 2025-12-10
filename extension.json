@@ -1,0 +1,52 @@
+{
+    "name": "DarkMode",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "url": "https://www.mediawiki.org/wiki/Extension:DarkMode",
+    "descriptionmsg": "darkmode-desc",
+    "license-name": "MIT",
+    "type": "other",
+    "requires": {
+        "MediaWiki": ">= 1.39.0"
+    },
+    "AutoloadClasses": {
+        "MediaWiki\\Extension\\DarkMode\\Hooks": "includes/Hooks.php"
+    },
+    "Hooks": {
+        "BeforePageDisplay": [
+            "MediaWiki\\Extension\\DarkMode\\Hooks::onBeforePageDisplay"
+        ],
+        "GetPreferences": [
+            "MediaWiki\\Extension\\DarkMode\\Hooks::onGetPreferences"
+        ]
+    },
+    "ResourceModules": {
+        "ext.darkMode.styles": {
+            "styles": [
+                "resources/darkmode.less"
+            ],
+            "targets": ["desktop", "mobile"],
+            "position": "top"
+        },
+        "ext.darkMode.scripts": {
+            "scripts": [
+                "resources/darkmode.js"
+            ],
+            "dependencies": [
+                "mediawiki.util",
+                "mediawiki.user",
+                "mediawiki.storage"
+            ],
+            "messages": [
+                "darkmode-toggle-label"
+            ],
+            "targets": ["desktop", "mobile"]
+        }
+    },
+    "MessagesDirs": {
+        "DarkMode": [
+            "i18n"
+        ]
+    },
+    "manifest_version": 2
+}

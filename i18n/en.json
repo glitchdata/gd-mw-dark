@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Your Name"
+        ]
+    },
+    "darkmode-desc": "Adds a site-wide dark mode toggle with an optional per-user preference.",
+    "darkmode-pref-label": "Enable dark mode by default",
+    "darkmode-pref-help": "When enabled, pages load in dark mode unless you toggle it off.",
+    "darkmode-toggle-label": "Dark mode"
+}
